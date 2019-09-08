@@ -19,6 +19,14 @@ steps:
     npm install
   displayName: 'npm install'
 
+- task: CopyFiles@2
+  displayName: 'Copy azuredeploy Resources'
+  inputs:
+    SourceFolder: '.'
+    Contents: 'azuredeploy.*'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    OverWrite: true
+
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.BinariesDirectory)'
