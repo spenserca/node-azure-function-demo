@@ -1,6 +1,5 @@
 param(
-    [string]$pathToDrop,
-    [string]$resourceGroupName = 'node-azure-function-demo'
+    [string]$resourceGroupName
 )
 
 # Create Azure resource group
@@ -16,7 +15,7 @@ New-AzureRmResourceGroup `
 New-AzureRmResourceGroupDeployment `
     -ResourceGroupName $resourceGroupName `
     -Mode Complete `
-    -TemplateFile "$( $pathToDrop )/azuredeploy.json" `
+    -TemplateFile "azuredeploy.json" `
     -OutVariable deployment `
     -Force `
     -Verbose
