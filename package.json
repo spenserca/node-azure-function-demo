@@ -1,0 +1,16 @@
+{
+  "name": "@spenserca/node-azure-function-demo",
+  "version": "1.0.0",
+  "description": "A hello world Azure function app written in node",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn test"
+  },
+  "keywords": [
+    "azure",
+    "node",
+    "azure-function"
+  ],
+  "author": "spenserca",
+  "license": "ISC"
+}

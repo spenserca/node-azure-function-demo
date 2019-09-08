@@ -1,0 +1,13 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "type": "httpTrigger",
+      "direction": "in",
+      "methotds": [
+        "get"
+      ],
+      "route": "hello-world"
+    }
+  ]
+}
