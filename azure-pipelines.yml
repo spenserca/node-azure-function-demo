@@ -27,9 +27,14 @@ steps:
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
     OverWrite: true
 
+- task: CmdLine@2
+  inputs:
+    script: |
+      ls -a
+
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    rootFolderOrFile: '.'
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
