@@ -8,13 +8,13 @@
     }
   },
   "variables": {
-    "storageAccountName": "[concat(resourceGroup().name, '-store')]"
+    "storageAccountName": "nodeazfuncdemostore"
   },
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
       "name": "[variables('storageAccountName')]",
-      "location": "[parameters('location')]",
+      "location": "[resourceGroup().location]",
       "apiVersion": "2015-06-15",
       "sku": {
         "name": "Standard_LRS"
@@ -22,11 +22,11 @@
       "kind": "StorageV2",
       "properties": {}
     }
-  ]
-  //  "outputs": {
-  //    "storageAccountName": {
-  //      "type": "string",
-  //      "value": "[variables('storageAccountName')]"
-  //    }
-  //  }
+  ],
+  "outputs": {
+    "storageAccountName": {
+      "type": "string",
+      "value": "[variables('storageAccountName')]"
+    }
+  }
 }
