@@ -22,11 +22,11 @@
       "kind": "StorageV2",
       "properties": {}
     }
-  ],
-  "outputs": {
-    "storageAccountName": {
-      "type": "string",
-      "value": "[variables('storageAccountName')]"
-    }
-  }
+  ]
+  //  "outputs": {
+  //    "storageAccountName": {
+  //      "type": "string",
+  //      "value": "[variables('storageAccountName')]"
+  //    }
+  //  }
 }
