@@ -1,4 +1,5 @@
 param(
+    [string]$pathToDrop,
     [string]$resourceGroupName
 )
 
@@ -15,7 +16,7 @@ New-AzureRmResourceGroup `
 New-AzureRmResourceGroupDeployment `
     -ResourceGroupName $resourceGroupName `
     -Mode Complete `
-    -TemplateFile "azuredeploy.json" `
+    -TemplateFile "$( $pathToDrop )/azuredeploy.json" `
     -OutVariable deployment `
     -Force `
     -Verbose
