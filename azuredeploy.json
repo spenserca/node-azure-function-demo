@@ -15,11 +15,12 @@
       "type": "Microsoft.Storage/storageAccounts",
       "name": "[variables('storageAccountName')]",
       "location": "[parameters('location')]",
-      "apiVersion": "2019-04-01",
+      "apiVersion": "2015-06-15",
       "sku": {
         "name": "Standard_LRS"
       },
-      "kind": "StorageV2"
+      "kind": "StorageV2",
+      "properties": {}
     }
   ],
   "outputs": {
